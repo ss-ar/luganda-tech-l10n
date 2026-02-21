@@ -102,8 +102,7 @@ To establish a sustainable and recognized Luganda localization standard that can
 
 ## 📄 License
 
-This project is open and may be reused or adapted with proper attribution.
+This project is licensed under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 
 ---
-
 *Luganda Tech Localization — okutumbula olulimi oluganda mu kibiina kya open source.*
