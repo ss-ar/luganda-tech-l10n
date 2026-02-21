@@ -7,7 +7,7 @@ status: "approved"
 domains: ["installer", "storage", "system"]
 tags: ["disk", "storage"]
 last_reviewed: "2026-02-21"
----------------------------
+---
 
 ## Meaning
 
