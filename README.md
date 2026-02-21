@@ -102,7 +102,7 @@ To establish a sustainable and recognized Luganda localization standard that can
 
 ## 📄 License
 
-This project is open and may be reused or adapted with proper attribution (recommended: CC BY 4.0).
+This project is open and may be reused or adapted with proper attribution.
 
 ---
 
