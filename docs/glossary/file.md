@@ -7,7 +7,7 @@ status: "approved"
 domains: ["desktop", "file-management", "system"]
 tags: ["storage", "document"]
 last_reviewed: "2026-02-21"
----------------------------
+---
 
 ## Meaning
 
