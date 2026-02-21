@@ -1,151 +1,193 @@
-# Terminology Policy
+# Loanword and Terminology Adaptation Policy
 
-This document defines the principles used to determine how technical terms are translated into Luganda within this project.
+This document defines how English and other foreign technical terms are handled in Luganda localization within this project.
 
-The objective is to balance clarity, linguistic integrity, usability, and long-term consistency across open-source ecosystems.
+The project adopts a **hybrid terminology model**, balancing linguistic integrity with technical clarity and usability.
 
 ---
 
-## 1. Core Philosophy
+## 1. Core Principle
+
+The purpose of localization is **clarity and usability**, not linguistic purity.
 
 Terminology decisions must prioritize:
 
 1. User comprehension
-2. Consistency across projects
-3. Linguistic correctness
-4. Technical precision
+2. Consistency
+3. Technical accuracy
+4. Natural Luganda structure
 
-Literal translation is not required if it reduces clarity.
-
----
-
-## 2. Hybrid Translation Model
-
-This project adopts a hybrid approach:
-
-* Luganda grammar and sentence structure are used consistently.
-* Technical nouns may remain in adapted or recognizable loanword form when clarity is improved.
-
-This avoids:
-
-* Overly literal translations that sound unnatural
-* Excessive borrowing that erodes Luganda structure
+Loanwords are acceptable when they improve clarity and recognition.
 
 ---
 
-## 3. When to Use Loanwords
+## 2. Terminology Classification Model
 
-Loanwords are acceptable when:
+All technical terms fall into one of four categories:
 
-* The term is globally standardized (e.g., USB, Wi-Fi, Linux).
-* The Luganda equivalent is ambiguous or overly long.
-* The translated form would reduce clarity in a technical context.
-* The user community already recognizes the English-derived term.
+---
+
+### Category 1: Global Technical Standards (Do Not Translate)
+
+These are internationally standardized technical identifiers.
+
+Examples:
+
+* USB
+* Wi-Fi
+* Linux
+* HTTP
+* BIOS
+* UEFI
+* TCP/IP
+
+**Rule:**
+
+* Keep original spelling.
+* Do not translate.
+* Do not phoneticize.
+* Do not add Luganda prefixes or suffixes.
+
+These are protocol names, not vocabulary terms.
+
+---
+
+### Category 2: Adapted Technical Loanwords
+
+These are technical nouns commonly used in computing and software interfaces.
 
 Examples:
 
 * Disk → Disiki
 * Partition → Patisoni
 * File → Fayiro
-* USB → USB
+* Folder → Folda
+* Server → Seva
+* Driver → Diraiva
 
-Loanwords should follow consistent spelling once adopted.
+**Rule:**
+
+* Adapt to Luganda phonetics.
+* Choose one standardized spelling.
+* Document it in the glossary.
+* Do not alternate spellings.
+
+Example:
+If "Disiki" is approved, do not later use "Diski" or "Disk".
+
+Consistency is mandatory.
 
 ---
 
-## 4. When to Prefer Native Luganda Terms
+### Category 3: Native Luganda Action Verbs (Translate Fully)
 
-Native Luganda terms should be preferred when:
-
-* The concept has a clear and widely understood Luganda equivalent.
-* The term refers to general actions (e.g., Save, Search, Open).
-* The translation improves accessibility for non-technical users.
+General interface actions must use proper Luganda verbs.
 
 Examples:
 
-* Save → Tereka
-* Search → Noonya
 * Open → Ggulawo
 * Close → Ggalawo
+* Save → Tereka
+* Search → Noonya
+* Delete → Sazaamu
+* Remove → Gyawo
+* Continue (workflow) → Weyongerayo
+
+**Rule:**
+
+* Do not replace common verbs with English loanwords.
+* Maintain correct Luganda grammar and verb forms.
+* Use strong verbs for irreversible actions.
+
+---
+
+### Category 4: Abstract or Complex Technical Concepts (Case-by-Case)
+
+Some terms require discussion due to complexity or ambiguity.
+
+Examples:
+
+* Encryption
+* Virtualization
+* Containerization
+* Repository
+* Kernel
+* Mount
+
+**Rule:**
+
+* Open a terminology discussion issue.
+* Provide context and usage examples.
+* Evaluate clarity, length, and usability.
+* Document the final decision.
+
+These terms must never be decided without review.
+
+---
+
+## 3. Spelling Standardization Rules
+
+To avoid inconsistency:
+
+1. Once a spelling is approved, it must not change without formal review.
+2. Avoid mixing phonetic variants.
+3. Avoid partial English spelling unless the term is Category 1.
+4. Document spelling decisions in the glossary.
+
+Approved spelling becomes binding for all future translations.
+
+---
+
+## 4. Context-Based Adaptation
+
+Some English terms may require different Luganda translations depending on context.
+
+Example:
+
+* Continue (workflow progression) → Weyongerayo
+* Add more (quantity increase) → Weyongere
+
+Context must always guide the choice.
+
+If a term changes meaning depending on environment, the distinction must be documented.
 
 ---
 
 ## 5. Avoiding Over-Translation
 
-Avoid creating complex or artificial phrases when:
+Avoid creating long descriptive phrases when:
 
-* The translation becomes significantly longer than the original.
-* The meaning becomes indirect or abstract.
-* The resulting phrase resembles a description rather than a term.
+* The loanword is already widely understood.
+* The translation becomes unclear.
+* The term becomes too long for UI display.
 
-Clarity must not be sacrificed for linguistic purity.
-
----
-
-## 6. One Concept, One Term
-
-Each technical concept must have:
-
-* One primary approved Luganda equivalent.
-* A standardized spelling.
-* Documented usage context.
-
-If alternatives exist, one must be selected as primary, and others documented as deprecated or contextual.
+Clarity and brevity are essential in interface localization.
 
 ---
 
-## 7. Context Sensitivity
+## 6. Long-Term Terminology Stability
 
-Some terms may require different translations depending on context.
-
-Example:
-
-* “Continue” (workflow progression) → Weyongerayo
-* “Add more” (quantity increase) → Weyongere
-
-Context-based decisions must be documented.
-
----
-
-## 8. Irreversible and High-Risk Actions
-
-For destructive operations (formatting disks, deleting partitions, wiping data):
-
-* Use strong verbs.
-* Avoid ambiguous wording.
-* Ensure the seriousness of the action is clear.
-
-All such terminology must be reviewed carefully before approval.
-
----
-
-## 9. Terminology Documentation Process
-
-Every significant terminology decision must:
-
-1. Be proposed through an issue.
-2. Include contextual examples.
-3. Be discussed openly.
-4. Be documented in:
-
-   * `docs/GLOSSARY.md`
-   * `docs/DECISIONS/` (if significant)
-
-This ensures transparency and prevents future inconsistency.
-
----
-
-## 10. Long-Term Standardization
-
-This project aims to establish a consistent Luganda technical terminology standard that can be adopted across:
+All approved loanwords and translations should aim for long-term stability across:
 
 * Linux distributions
 * Desktop environments
 * Open-source applications
-* Educational technology initiatives
+* Educational deployments
 
-Terminology choices should therefore consider long-term ecosystem impact.
+Terminology decisions should consider ecosystem-wide impact, not project-specific convenience.
 
 ---
 
-This policy may evolve as usage patterns and community consensus develop.
+## 7. Documentation Requirement
+
+All significant terminology decisions must:
+
+* Be discussed publicly.
+* Be recorded in `docs/DECISIONS/`.
+* Be reflected in `docs/GLOSSARY/`.
+
+No term becomes official without documentation.
+
+---
+
+This hybrid model ensures that Luganda technical localization remains modern, usable, consistent, and sustainable across open-source ecosystems.
